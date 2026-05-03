@@ -4,6 +4,8 @@ description: "AI Attacks covers offensive AI security from a working practitione
 pubDate: 2026-05-03
 tags: ["meta"]
 category: "site"
+heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/welcome.png
+heroAlt: "What this site is for"
 ---
 
 AI Attacks exists to cover offensive AI security with the same rigor a working AI red teamer would expect — and the same honesty about what does and doesn't land in production.

@@ -1,8 +1,4 @@
-/* Brand + visual variant for aiattacks-dev
- * cluster: offensive
- * variant: v3_split_asymmetric_brutalist
- * Generated 2026-05-07. Higher specificity than globals.css cluster rules. */
-
+/* Brand for aiattacks-dev: cluster=offensive, variant=v3_split_asymmetric_brutalist */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
 
 body[data-cluster='offensive'] {
@@ -25,30 +21,4 @@ body[data-cluster='offensive'] {
 html.dark body[data-cluster='offensive'] {
   --bg: 13 8 8; --fg: 254 242 242; --surface: 26 15 15;
   --accent-500: 220 38 38; --accent-600: 220 38 38;
-}
-
-
-body[data-cluster='offensive'] {
-  --type-scale: 1.500;
-  --space-y: 0.25rem;
-}
-body[data-cluster='offensive'] h1 { font-size: calc(1rem * var(--type-scale) * var(--type-scale) * var(--type-scale) * var(--type-scale)); line-height: 1.05; }
-body[data-cluster='offensive'] h2 { font-size: calc(1rem * var(--type-scale) * var(--type-scale) * var(--type-scale)); line-height: 1.15; }
-body[data-cluster='offensive'] h3 { font-size: calc(1rem * var(--type-scale) * var(--type-scale)); line-height: 1.2; }
-body[data-cluster='offensive'] p { margin-block: var(--space-y); }
-
-
-/* Hero / header layout — variant: split-large */
-body[data-cluster='offensive'] .hero, body[data-cluster='offensive'] header.site-header { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; padding: 5rem 1rem; }
-
-/* Card style — variant: flat */
-body[data-cluster='offensive'] article { background: rgb(26 15 15); }
-
-/* Accent application — variant: block-fill */
-body[data-cluster='offensive'] h1, body[data-cluster='offensive'] h2 { background: rgb(220 38 38); color: rgb(13 8 8); display: inline-block; padding: 0.1em 0.4em; }
-
-/* Border radius — variant uses 0 */
-body[data-cluster='offensive'] article,
-body[data-cluster='offensive'] .card {
-  border-radius: 0;
 }

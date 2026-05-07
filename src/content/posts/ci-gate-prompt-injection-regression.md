@@ -12,7 +12,7 @@ sources:
     url: "https://github.com/promptfoo/promptfoo"
 schema:
   type: "TechArticle"
-heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/?prompt=tactical%20red%20team%20CI%20pipeline%20visualization%2C%20dark%20noir%20with%20orange%20accent&aspect=hero
+heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/ci-gate-prompt-injection-regression.png
 heroAlt: "Prompt injection CI gate visualization"
 ---
 

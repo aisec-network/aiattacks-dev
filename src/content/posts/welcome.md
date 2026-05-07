@@ -1,5 +1,6 @@
 ---
 title: "What this site is for"
+author: "Marcus Reyes"
 description: "AI Attacks covers offensive AI security from a working practitioner's perspective. Here's what we publish."
 pubDate: 2026-05-03
 tags: ["meta"]

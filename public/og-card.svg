@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#dc2626" stop-opacity="0" />
+      <stop offset="1" stop-color="#dc2626" stop-opacity="0.18" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0d0808" />
+  <rect x="0" y="0" width="6" height="630" fill="#dc2626" />
+  <rect x="850" y="0" width="350" height="630" fill="url(#glow)" />
+  <g transform="translate(80, 200)">
+    <text font-family="IBM Plex Mono, system-ui, sans-serif" font-size="78" font-weight="700" fill="#fef2f2" letter-spacing="-2">
+      AI Attacks
+    </text>
+    <text y="120" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="32" fill="#7f1d1d" letter-spacing="0">
+      Attack research. No vendor filter.
+    </text>
+    <text y="280" font-family="IBM Plex Sans, monospace" font-size="22" fill="#dc2626" letter-spacing="2" text-transform="uppercase">
+      aiattacks.dev
+    </text>
+  </g>
+</svg>

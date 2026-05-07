@@ -1,43 +1,54 @@
-/* Brand override for aiattacks-dev — cluster=offensive.
- * Uses cluster-matching selector specificity (0,1,1) so this OVERRIDES the
- * cluster defaults from globals.css, which use the same selector specificity.
- * Source order wins; brand.css is imported after globals.css in BaseLayout.
- */
+/* Brand + visual variant for aiattacks-dev
+ * cluster: offensive
+ * variant: v3_split_asymmetric_brutalist
+ * Generated 2026-05-07. Higher specificity than globals.css cluster rules. */
 
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
 
-body[data-cluster="offensive"] {
+body[data-cluster='offensive'] {
   --bg: 13 8 8;
   --fg: 254 242 242;
   --surface: 26 15 15;
   --muted: 13 8 8;
   --muted-fg: 127 29 29;
   --border: 127 29 29;
-
   --font-display: "IBM Plex Mono", system-ui, sans-serif;
   --font-body: "IBM Plex Sans", system-ui, sans-serif;
-
-  /* Override the accent ramp midpoints with brand accent.
-   * The 400-700 range is what most components use. */
   --accent-400: 220 38 38;
   --accent-500: 220 38 38;
   --accent-600: 220 38 38;
   --accent-700: 220 38 38;
-
-  /* Brand metadata */
   --brand-tone: "dark-red-alert";
   --brand-accent-rgb: 220 38 38;
+  --brand-variant: "v3_split_asymmetric_brutalist";
+}
+html.dark body[data-cluster='offensive'] {
+  --bg: 13 8 8; --fg: 254 242 242; --surface: 26 15 15;
+  --accent-500: 220 38 38; --accent-600: 220 38 38;
 }
 
-/* Same in dark mode (most brand books are dark-tone already) */
-html.dark body[data-cluster="offensive"] {
-  --bg: 13 8 8;
-  --fg: 254 242 242;
-  --surface: 26 15 15;
-  --muted: 13 8 8;
-  --muted-fg: 127 29 29;
-  --accent-400: 220 38 38;
-  --accent-500: 220 38 38;
-  --accent-600: 220 38 38;
-  --accent-700: 220 38 38;
+
+body[data-cluster='offensive'] {
+  --type-scale: 1.500;
+  --space-y: 0.25rem;
+}
+body[data-cluster='offensive'] h1 { font-size: calc(1rem * var(--type-scale) * var(--type-scale) * var(--type-scale) * var(--type-scale)); line-height: 1.05; }
+body[data-cluster='offensive'] h2 { font-size: calc(1rem * var(--type-scale) * var(--type-scale) * var(--type-scale)); line-height: 1.15; }
+body[data-cluster='offensive'] h3 { font-size: calc(1rem * var(--type-scale) * var(--type-scale)); line-height: 1.2; }
+body[data-cluster='offensive'] p { margin-block: var(--space-y); }
+
+
+/* Hero / header layout — variant: split-large */
+body[data-cluster='offensive'] .hero, body[data-cluster='offensive'] header.site-header { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; padding: 5rem 1rem; }
+
+/* Card style — variant: flat */
+body[data-cluster='offensive'] article { background: rgb(26 15 15); }
+
+/* Accent application — variant: block-fill */
+body[data-cluster='offensive'] h1, body[data-cluster='offensive'] h2 { background: rgb(220 38 38); color: rgb(13 8 8); display: inline-block; padding: 0.1em 0.4em; }
+
+/* Border radius — variant uses 0 */
+body[data-cluster='offensive'] article,
+body[data-cluster='offensive'] .card {
+  border-radius: 0;
 }

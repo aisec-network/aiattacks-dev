@@ -10,6 +10,8 @@ const persona = {
 const avatarUrl = "https://aisec-imagegen.th3gptoperator.workers.dev/?prompt=Professional%20headshot%20of%20Marcus%20Reyes%2C%20a%20confident%20Latino%20man%20in%20his%20mid-30s%2C%20dark%20background%2C%20subtle%20technical%20aesthetic%2C%20high%20contrast%2C%20photorealistic%2C%20professional%20headshot%2C%20square&aspect=square";
 ---
 <BaseLayout title={`About ${persona.name}`} description={persona.bioShort}>
+  <script type="application/ld+json" set:html={JSON.stringify({"@context": "https://schema.org", "@type": "Person", "name": "Marcus Reyes", "description": "Red teamer with OSCP + OSEP. Ten years breaking AI systems before it was a job title. Presents at AI Village. Writes about what actually works, not what vendors claim.", "url": "https://aiattacks.dev/about", "knowsAbout": ["confident", "war-stories", "slightly contrarian", "practitioner-first"], "sameAs": ["https://aisec.blog/about", "https://jailbreakdb.com/about", "https://jailbreaks.fyi/about", "https://adversarialml.dev/about"], "jobTitle": "Confident"})}></script>
+
   <article class="prose mx-auto max-w-2xl py-16 px-4">
     <h1>About {persona.name}</h1>
     <img src={avatarUrl} alt={persona.name} width="200" height="200" style="border-radius:50%;object-fit:cover;float:right;margin:0 0 1rem 1.5rem;" loading="eager" />

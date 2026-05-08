@@ -1,24 +1,35 @@
-/* Brand for aiattacks-dev: cluster=offensive, variant=v3_split_asymmetric_brutalist */
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+/* Brand for aiattacks-dev: identity=f28_mono_spacemono_jakarta+p26_h124_cool+feed+v01_editorial */
 
-body[data-cluster='offensive'] {
-  --bg: 13 8 8;
-  --fg: 254 242 242;
-  --surface: 26 15 15;
-  --muted: 13 8 8;
-  --muted-fg: 127 29 29;
-  --border: 127 29 29;
-  --font-display: "IBM Plex Mono", system-ui, sans-serif;
-  --font-body: "IBM Plex Sans", system-ui, sans-serif;
-  --accent-400: 220 38 38;
-  --accent-500: 220 38 38;
-  --accent-600: 220 38 38;
-  --accent-700: 220 38 38;
-  --brand-tone: "dark-red-alert";
-  --brand-accent-rgb: 220 38 38;
-  --brand-variant: "v3_split_asymmetric_brutalist";
+body[data-cluster] {
+  --bg: 254 254 255;
+  --fg: 12 18 32;
+  --muted: 246 248 252;
+  --muted-fg: 70 80 108;
+  --border: 220 226 238;
+  --surface: 254 254 255;
+  --surface-alt: 246 248 252;
+  --font-display: "Space Mono", ui-monospace, monospace;
+  --font-body: "Plus Jakarta Sans", "Helvetica Neue", system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+  --brand-accent-rgb: 41 174 50;
+  --brand-identity-font: "f28_mono_spacemono_jakarta";
+  --brand-identity-palette: "p26_h124_cool";
+  --brand-identity-layout: "feed";
+  --brand-identity-voice: "v01_editorial";
 }
-html.dark body[data-cluster='offensive'] {
-  --bg: 13 8 8; --fg: 254 242 242; --surface: 26 15 15;
-  --accent-500: 220 38 38; --accent-600: 220 38 38;
+
+html.dark body[data-cluster] {
+  --bg: 12 16 28;
+  --fg: 240 244 252;
+  --muted: 22 28 46;
+  --muted-fg: 156 166 196;
+  --border: 50 60 84;
+  --surface: 12 16 28;
+  --surface-alt: 22 28 46;
+  --brand-accent-rgb: 71 225 81;
 }
+
+/* Density modifiers */
+body.density-loose  { --space-section: 5rem; }
+body.density-normal { --space-section: 3rem; }
+body.density-dense  { --space-section: 1.5rem; }

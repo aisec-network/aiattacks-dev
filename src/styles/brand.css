@@ -11,7 +11,7 @@ body[data-cluster] {
   --font-display: "Space Mono", ui-monospace, monospace;
   --font-body: "Plus Jakarta Sans", "Helvetica Neue", system-ui, sans-serif;
   --font-mono: "Space Mono", ui-monospace, monospace;
-  --brand-accent-rgb: 41 174 50;
+  --brand-accent-rgb: 0 0 0;
   --brand-identity-font: "f28_mono_spacemono_jakarta";
   --brand-identity-palette: "p26_h124_cool";
   --brand-identity-layout: "feed";
@@ -26,7 +26,7 @@ html.dark body[data-cluster] {
   --border: 50 60 84;
   --surface: 12 16 28;
   --surface-alt: 22 28 46;
-  --brand-accent-rgb: 71 225 81;
+  --brand-accent-rgb: 255 255 255;
 }
 
 /* Density modifiers */

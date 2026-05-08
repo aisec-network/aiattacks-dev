@@ -1,0 +1,201 @@
+{
+  "cluster": "offensive",
+  "categories": [
+    {
+      "name": "Prompt Injection Scanners",
+      "slug": "prompt-injection-scanners",
+      "tools": [
+        {
+          "name": "garak",
+          "url": "https://github.com/NVIDIA/garak",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "Modular LLM vulnerability scanner (Generative AI Red-teaming and Assessment Kit) — probes for prompt injection, jailbreak, toxicity, hallucination, data exfiltration, and malware generation across dozens of pluggable detectors.",
+          "our_take": "The reference open-source LLM scanner, now maintained by NVIDIA. Its probe-per-vulnerability design makes it CI-friendly — run a curated subset as a gate on every model deployment. Some probes are noisy and require tuning per target model; treat raw pass rates as a starting point, not a final verdict."
+        },
+        {
+          "name": "promptmap / promptmap2",
+          "url": "https://github.com/utkusen/promptmap",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "Automated prompt injection and jailbreak scanner for custom LLM applications — reads your system prompt, generates attack payloads organized by category (distraction, prompt stealing, jailbreak, harmful content, hate speech, social bias), and reports successes.",
+          "our_take": "Purpose-built for testing production system prompts rather than base models. The white-box mode where you feed in your actual system prompt is genuinely useful for rapid iteration during development. Completely rewritten as promptmap2 in early 2025 with multi-provider support (OpenAI, Anthropic, Google, Ollama)."
+        },
+        {
+          "name": "PromptBench",
+          "url": "https://github.com/microsoft/promptbench",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "Microsoft's unified evaluation framework for LLM robustness — adversarial prompt attacks across character, word, sentence, and semantic levels with benchmark tasks spanning sentiment analysis, NLI, reading comprehension, math, and translation.",
+          "our_take": "More of an evaluation framework than a real-time scanner. Useful for establishing a quantitative robustness baseline before you start optimizing your system prompt or fine-tune. Word-level attacks produce the biggest drops (33% in the original paper) — start there."
+        },
+        {
+          "name": "promptfoo",
+          "url": "https://github.com/promptfoo/promptfoo",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "CLI and library for LLM evaluation and red-teaming — covers 50+ vulnerability types including prompt injection, jailbreaks, PII leakage, hallucination, and insecure output handling, with CI/CD integration and side-by-side model comparison.",
+          "our_take": "Best developer UX in the category. The declarative YAML config lets you define attack suites as code and run them in CI. Originally eval-first; red-team capabilities were added later and are maturing fast. Now part of OpenAI but remains MIT-licensed."
+        }
+      ]
+    },
+    {
+      "name": "Jailbreak Frameworks & Benchmarks",
+      "slug": "jailbreak-frameworks",
+      "tools": [
+        {
+          "name": "JailbreakBench",
+          "url": "https://github.com/JailbreakBench/jailbreakbench",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "Open robustness benchmark for jailbreaking LLMs (NeurIPS 2024 Datasets & Benchmarks) — the JBB-Behaviors dataset of 200 misuse behaviors, standardized attack scripts, reproducible judge models, and a public leaderboard.",
+          "our_take": "The cleanest apples-to-apples benchmark for comparing attack success rates. The judge model is the most debated component — run results through multiple judges when publishing. Essential reference point for any new attack paper."
+        },
+        {
+          "name": "HarmBench",
+          "url": "https://github.com/centerforaisafety/HarmBench",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "Standardized evaluation framework for automated red teaming from CAIS — 510 behaviors across 7 semantic categories, 18 red-teaming methods evaluated against 33 target LLMs and defenses, classifier-based success scoring.",
+          "our_take": "More comprehensive than AdvBench in behavior coverage and harder to game than human-labeled scoring. The large-scale comparison of 18 attack methods is the most useful artifact — read it before building any new attack. Prefer HarmBench over AdvBench for new research."
+        },
+        {
+          "name": "AutoDAN-Turbo",
+          "url": "https://github.com/SaFoLab-WISC/AutoDAN-Turbo",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "ICLR 2025 Spotlight — lifelong black-box jailbreak agent that autonomously discovers and evolves attack strategies without human intervention, achieving 88.5% ASR against GPT-4-1106-turbo and outperforming baselines by 74.3% on public benchmarks.",
+          "our_take": "The autonomous strategy-discovery design is a meaningful step beyond static suffix generation. Attack success rates on frontier models are impressive. Useful as a stress test of your guardrails — if AutoDAN-Turbo can't crack your system after N iterations, you have meaningful confidence."
+        },
+        {
+          "name": "TAP (Tree of Attacks with Pruning)",
+          "url": "https://github.com/RICommunity/TAP",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "Black-box jailbreak method (NeurIPS 2024) that uses an attacker LLM with tree-of-thoughts reasoning to iteratively refine attack prompts — prunes unpromising branches, jailbreaks GPT-4 and Claude for 80%+ of test behaviors.",
+          "our_take": "One of the most transfer-efficient black-box attacks available. Requires only an attacker LLM and API access to the target — no gradient access. The pruning step meaningfully reduces query count. Good choice when you need to demonstrate concrete attack risk to stakeholders with limited budget."
+        },
+        {
+          "name": "GPTFuzz",
+          "url": "https://github.com/sherdencooper/GPTFuzz",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "Black-box jailbreak fuzzing framework that mutates human-written seed templates — seed selection strategy, semantic mutation operators, and a judgment model, achieving over 90% ASR against ChatGPT and Llama-2.",
+          "our_take": "Template-mutation approach finds jailbreaks that optimization-based methods miss. The seed corpus you feed it largely determines output quality — invest time curating good seeds. Pairs well with GCG for complementary coverage."
+        }
+      ]
+    },
+    {
+      "name": "Red Team Platforms & Toolkits",
+      "slug": "red-team-toolkits",
+      "tools": [
+        {
+          "name": "PyRIT",
+          "url": "https://github.com/microsoft/PyRIT",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "Microsoft's Python Risk Identification Toolkit for generative AI — automates multi-turn attack orchestration, supports Crescendo, TAP, Skeleton Key, and custom strategies against OpenAI, Azure, Anthropic, Google, HuggingFace, and custom HTTP endpoints.",
+          "our_take": "Battle-tested by Microsoft's AI Red Team on 100+ internal operations before open-source release. The multi-turn conversation orchestration is the strongest feature — realistic, contextual attacks that single-shot frameworks miss. Higher learning curve than garak but far more flexible for novel attack research."
+        },
+        {
+          "name": "HouYi",
+          "url": "https://github.com/LLMSecurity/HouYi",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "Automated indirect prompt injection framework for LLM-integrated applications — draws from traditional web injection techniques to test RAG pipelines, agents, and plugin-enabled apps. Found 31/36 real applications vulnerable, including Notion.",
+          "our_take": "The IPI focus differentiates it from tools that only test direct injection. If you're red-teaming RAG pipelines or LLM agents with tool access, HouYi's three-component prompt structure (pre-built context, context partition, malicious payload) models real attacker methodology well."
+        },
+        {
+          "name": "ai-exploits",
+          "url": "https://github.com/protectai/ai-exploits",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "ProtectAI's catalog of working exploit PoCs against ML infrastructure platforms — MLflow, ClearML, Ray, H2O, Kubeflow, and others — covering SSRF, RCE, authentication bypass, and deserialization vulnerabilities.",
+          "our_take": "The closest thing to a Metasploit module collection for ML infrastructure. Required reading and running before any ML platform pentest. These aren't theoretical — the RCE chains against MLflow and Ray are fully weaponized."
+        }
+      ]
+    },
+    {
+      "name": "Optimization-Based Attack Research",
+      "slug": "optimization-attacks",
+      "tools": [
+        {
+          "name": "llm-attacks (GCG reference implementation)",
+          "url": "https://github.com/llm-attacks/llm-attacks",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "Official implementation of the Greedy Coordinate Gradient adversarial suffix attack from Zou et al. 2023 — transfers jailbreak suffixes trained on open-source models to black-box systems including GPT-4, Claude, and Bard.",
+          "our_take": "The foundational optimization-based jailbreak. Every subsequent attack paper benchmarks against it. Runnable on a 24GB consumer GPU; the nanogcg pip package (released 2024) makes it much easier to deploy. Use generated suffixes to build your defender's regression suite."
+        },
+        {
+          "name": "ArtPrompt",
+          "url": "https://github.com/uw-nsl/ArtPrompt",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "ACL 2024 paper and implementation — exploits LLMs' failure to recognize ASCII art representations of forbidden words, bypassing safety filters in GPT-3.5, GPT-4, Gemini, Claude, and Llama-2 without gradient access.",
+          "our_take": "Conceptually clean and effective. The attack exploits a real capability gap — models are undertrained on ASCII art — rather than brute-forcing alignment. Useful demonstration that content filters need to cover visual encodings, not just lexical patterns."
+        },
+        {
+          "name": "DeepInception",
+          "url": "https://github.com/tmlr-group/DeepInception",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "Jailbreak via nested fictional scenarios (EMNLP 2024) — exploits LLMs' tendency toward obedience within constructed narratives by wrapping harmful requests in multi-layer inception-style scenes.",
+          "our_take": "Effective on both open and closed models with minimal query budget. The prompt template is simple enough to implement manually, making it useful for human red teamers who need quick demonstrations. Continuous jailbreak in subsequent turns is the most practically dangerous property."
+        },
+        {
+          "name": "PEZ (Hard Prompts Made Easy)",
+          "url": "https://github.com/YuxinWenRick/hard-prompts-made-easy",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "Gradient-based discrete optimization method (NeurIPS 2023) for generating hard text prompts that transfer across models — bridges soft-prompt optimization with vocabulary-constrained hard prompts for both text-to-image and text-to-text tasks.",
+          "our_take": "More of a prompt engineering research tool than a red-team weapon, but the transferability properties have attack implications. Understanding PEZ helps you reason about why suffix attacks transfer. The code is clean and the method is fast."
+        }
+      ]
+    },
+    {
+      "name": "Adversarial ML Libraries",
+      "slug": "adversarial-ml-libraries",
+      "tools": [
+        {
+          "name": "Adversarial Robustness Toolbox (ART)",
+          "url": "https://github.com/Trusted-AI/adversarial-robustness-toolbox",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "IBM-led comprehensive adversarial ML library — evasion, poisoning, extraction, and inference attacks plus defenses and certifications across PyTorch, TensorFlow, JAX, and scikit-learn.",
+          "our_take": "The most complete general-purpose adversarial ML library. Primarily classical ML (image classifiers, tabular models) rather than LLMs, but the poisoning and extraction attack implementations are the best available. Essential for any adversarial ML research that goes beyond chat-model jailbreaks."
+        },
+        {
+          "name": "TextAttack",
+          "url": "https://github.com/QData/TextAttack",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "Adversarial attack and data augmentation framework for NLP — word substitution, sentence paraphrasing, character perturbation attacks against text classifiers and NLU models.",
+          "our_take": "Predates the LLM era and remains useful for classifier robustness work. Less relevant for chat-model security but still the right tool for testing safety classifiers and text-based detection systems that underpin many guardrail stacks."
+        }
+      ]
+    },
+    {
+      "name": "Datasets & Evaluation Benchmarks",
+      "slug": "datasets-benchmarks",
+      "tools": [
+        {
+          "name": "AdvBench",
+          "url": "https://github.com/llm-attacks/llm-attacks/tree/main/data/advbench",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "520-behavior adversarial benchmark from the GCG paper — the de facto standard dataset for comparing jailbreak attack success rates across publications.",
+          "our_take": "Still the baseline comparison point most papers cite. Increasingly gamed — models are fine-tuned specifically against AdvBench behaviors. Supplement with HarmBench for more robust evaluation."
+        },
+        {
+          "name": "AI Vulnerability Database (AVID)",
+          "url": "https://avidml.org/",
+          "license": "open-source",
+          "cost": "Free",
+          "description": "Open vulnerability disclosure platform for AI/ML systems — taxonomized reports of real-world failures, categorized by attack technique, vulnerability type, and impact domain.",
+          "our_take": "Younger than CVE/NVD but more AI-specific. The taxonomy aligns with MITRE ATLAS, making cross-referencing straightforward. File your disclosures here; the community is responsive and growing."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "title": "AI Security Resources",
+  "description": "Hand-picked papers, talks, courses, and communities. Refreshed periodically; older entries kept for reference where they remain canonical.",
+  "categories": [
+    {
+      "name": "Foundational Papers",
+      "items": [
+        { "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models (GCG)", "authors": "Zou et al., 2023", "url": "https://arxiv.org/abs/2307.15043", "tag": "attacks" },
+        { "title": "Are Aligned Neural Networks Adversarially Aligned?", "authors": "Carlini et al., 2023", "url": "https://arxiv.org/abs/2306.15447", "tag": "attacks" },
+        { "title": "Sleeper Agents: Training Deceptively Aligned LLMs", "authors": "Hubinger et al., 2024", "url": "https://arxiv.org/abs/2401.05566", "tag": "alignment" },
+        { "title": "Constitutional AI: Harmlessness from AI Feedback", "authors": "Bai et al., 2022", "url": "https://arxiv.org/abs/2212.08073", "tag": "alignment" },
+        { "title": "Training Language Models to Follow Instructions (InstructGPT)", "authors": "Ouyang et al., 2022", "url": "https://arxiv.org/abs/2203.02155", "tag": "alignment" },
+        { "title": "Privacy Risks of General-Purpose Language Models", "authors": "Pan et al., 2020", "url": "https://arxiv.org/abs/2005.07520", "tag": "privacy" },
+        { "title": "Extracting Training Data from Large Language Models", "authors": "Carlini et al., 2021", "url": "https://arxiv.org/abs/2012.07805", "tag": "privacy" },
+        { "title": "Membership Inference Attacks Against ML Models", "authors": "Shokri et al., 2017", "url": "https://arxiv.org/abs/1610.05820", "tag": "privacy" }
+      ]
+    },
+    {
+      "name": "Operational Reading",
+      "items": [
+        { "title": "OWASP LLM Top 10", "authors": "OWASP Project", "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/", "tag": "framework" },
+        { "title": "MITRE ATLAS", "authors": "MITRE", "url": "https://atlas.mitre.org/", "tag": "framework" },
+        { "title": "NIST AI Risk Management Framework", "authors": "NIST", "url": "https://www.nist.gov/itl/ai-risk-management-framework", "tag": "framework" },
+        { "title": "Anthropic Acceptable Use Policy", "authors": "Anthropic", "url": "https://www.anthropic.com/legal/aup", "tag": "policy" },
+        { "title": "OpenAI Usage Policies", "authors": "OpenAI", "url": "https://openai.com/policies/usage-policies/", "tag": "policy" }
+      ]
+    },
+    {
+      "name": "Tools & Frameworks",
+      "items": [
+        { "title": "garak — LLM vulnerability scanner", "authors": "NVIDIA", "url": "https://github.com/leondz/garak", "tag": "tool" },
+        { "title": "PyRIT — Python Risk Identification Tool", "authors": "Microsoft", "url": "https://github.com/Azure/PyRIT", "tag": "tool" },
+        { "title": "promptfoo — eval + red-team framework", "authors": "promptfoo", "url": "https://www.promptfoo.dev/", "tag": "tool" },
+        { "title": "NeMo Guardrails", "authors": "NVIDIA", "url": "https://github.com/NVIDIA/NeMo-Guardrails", "tag": "tool" },
+        { "title": "Guardrails AI", "authors": "Guardrails AI", "url": "https://github.com/guardrails-ai/guardrails", "tag": "tool" },
+        { "title": "Adversarial Robustness Toolbox", "authors": "IBM Trusted AI", "url": "https://github.com/Trusted-AI/adversarial-robustness-toolbox", "tag": "tool" },
+        { "title": "Langfuse — LLM observability", "authors": "Langfuse", "url": "https://langfuse.com/", "tag": "tool" }
+      ]
+    },
+    {
+      "name": "Talks & Videos",
+      "items": [
+        { "title": "AI Village @ DEF CON (annual)", "authors": "AI Village", "url": "https://aivillage.org/", "tag": "talk" },
+        { "title": "Generative Red Team @ DEF CON 31 — full results paper", "authors": "AI Village + Humane Intel", "url": "https://aivillage.org/grt/", "tag": "talk" },
+        { "title": "Black Hat USA AI track sessions", "authors": "Black Hat", "url": "https://www.blackhat.com/", "tag": "talk" },
+        { "title": "USENIX Security AI papers (annual)", "authors": "USENIX", "url": "https://www.usenix.org/conferences/byname/108", "tag": "talk" }
+      ]
+    },
+    {
+      "name": "Certifications & Training",
+      "items": [
+        { "title": "HackTheBox AI Red Teamer Path", "authors": "HackTheBox", "url": "https://academy.hackthebox.com/path/preview/ai-red-teamer", "tag": "training" },
+        { "title": "OffSec OSCP / OSEP", "authors": "OffSec", "url": "https://www.offsec.com/courses/oscp/", "tag": "training" },
+        { "title": "SANS AI Security curriculum", "authors": "SANS", "url": "https://www.sans.org/cyber-security-courses/?focus-area=ai-and-ml", "tag": "training" },
+        { "title": "Coursera — AI Security & Ethics specializations", "authors": "Coursera", "url": "https://www.coursera.org/", "tag": "training" }
+      ]
+    },
+    {
+      "name": "Communities",
+      "items": [
+        { "title": "AI Village Discord", "authors": "AI Village", "url": "https://aivillage.org/", "tag": "community" },
+        { "title": "MLSecOps community", "authors": "Protect AI", "url": "https://mlsecops.com/", "tag": "community" },
+        { "title": "OWASP LLM Top 10 Slack", "authors": "OWASP", "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/", "tag": "community" },
+        { "title": "AI Alignment Forum", "authors": "MIRI / FHI", "url": "https://www.alignmentforum.org/", "tag": "community" }
+      ]
+    },
+    {
+      "name": "Newsletters",
+      "items": [
+        { "title": "tldrsec — Weekly security newsletter", "url": "https://tldrsec.com/", "tag": "newsletter" },
+        { "title": "Risky.Biz — infosec podcast/newsletter", "url": "https://risky.biz/", "tag": "newsletter" },
+        { "title": "Embedded.ai — Helen Toner on AI policy", "url": "https://embedded.substack.com/", "tag": "newsletter" },
+        { "title": "The Batch — Andrew Ng's weekly AI newsletter", "url": "https://www.deeplearning.ai/the-batch/", "tag": "newsletter" }
+      ]
+    }
+  ]
+}

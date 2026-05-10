@@ -82,7 +82,7 @@ This is the most significant emerging variant because:
 - The blast radius extends to all agents in the dependency graph
 - Detection requires monitoring at each agent boundary, not just at the user-facing input
 
-LangGraph, AutoGen, and similar frameworks don't currently provide automatic context sanitization between agent hops.
+LangGraph, AutoGen, and similar frameworks don't currently provide automatic context sanitization between agent hops. A taxonomy of injection patterns that propagate through multi-agent pipelines is maintained at [promptinjection.report](https://promptinjection.report).
 
 ## What detection looks like
 
@@ -104,4 +104,4 @@ LangGraph, AutoGen, and similar frameworks don't currently provide automatic con
 
 **Privileged/unprivileged context separation.** Architecturally: operator instructions in the system prompt, user-retrieved memory in a clearly marked and explicitly untrusted section of the user turn. The model is instructed to interpret the untrusted section as data, not directives.
 
-The fundamental tension is that memory is useful precisely because it gives the model actionable context about the user's preferences and state. Stripping all instruction-like content from memory makes it mostly useless. The real mitigation is architectural — separating the trust level of memory from the trust level of the system prompt — and most current implementations don't make that distinction.
+The fundamental tension is that memory is useful precisely because it gives the model actionable context about the user's preferences and state. Engineering guides for implementing the architectural separations described here — trust levels, privilege scoping, output filtering — are covered at [aidefense.dev](https://aidefense.dev). Stripping all instruction-like content from memory makes it mostly useless. The real mitigation is architectural — separating the trust level of memory from the trust level of the system prompt — and most current implementations don't make that distinction.

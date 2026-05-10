@@ -88,10 +88,10 @@ In testing, a payload structured as an explicit override succeeds against most o
 
 **Retrieval-time content inspection.** Scan ingested documents for known injection patterns before indexing. This is a cat-and-mouse game but catches unsophisticated attacks and is easy to implement as a pre-index step.
 
-**Principle of least privilege for tool access.** If the RAG agent has tool access, audit what it can do. An injection that can only produce text in the response is a nuisance. An injection that can call `send_email`, `post_to_slack`, or `run_query` is a breach.
+**Principle of least privilege for tool access.** If the RAG agent has tool access, audit what it can do. An injection that can only produce text in the response is a nuisance. An injection that can call `send_email`, `post_to_slack`, or `run_query` is a breach. For a complete engineering guide to privilege scoping and defense-in-depth controls for LLM deployments, see [aidefense.dev](https://aidefense.dev).
 
 ## Where this ends up
 
-Indirect prompt injection in RAG is the most practical LLM attack in wide deployment right now. It doesn't require privileged access, it survives across model versions (because it exploits the instruction-following behavior that makes the model useful, not a specific model flaw), and the attack surface grows with every new data source plugged into the pipeline.
+Indirect prompt injection in RAG is the most practical LLM attack in wide deployment right now. For ongoing coverage of documented incidents and technique variants, see [promptinjection.report](https://promptinjection.report). It doesn't require privileged access, it survives across model versions (because it exploits the instruction-following behavior that makes the model useful, not a specific model flaw), and the attack surface grows with every new data source plugged into the pipeline.
 
 The defense posture needs to treat retrieved content as untrusted by default — the same way you'd treat any user input in a traditional web app. Right now most pipelines don't do that.

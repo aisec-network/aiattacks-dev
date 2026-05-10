@@ -34,7 +34,7 @@ The fixed corpus matters. Most teams test against a few hand-picked prompts they
 
 ## The corpus
 
-[garak](https://github.com/leondz/garak) ships modular test suites. Use the maintained ones, in priority order for a customer-facing app:
+[garak](https://github.com/leondz/garak) ships modular test suites. Use the maintained ones, in priority order for a customer-facing app. Additional benchmark corpora for AI security testing are catalogued at [aisecbench.com](https://aisecbench.com):
 
 - `garak.probes.promptinject.HijackHateHumans`
 - `garak.probes.promptinject.HijackKillHumans`
@@ -158,4 +158,4 @@ For mature teams, extend the corpus with attacks specific to your application:
 - Domain-specific bypasses your team hasn't seen yet (the gate is a backstop, not a substitute for ongoing red-team)
 - Adversarial-suffix attacks (those need GPU and shouldn't be in CI)
 
-The gate catches the regression class. The other classes need their own programs. But running this gate consistently is a 10x improvement over not having one — which is where most LLM apps still are.
+The gate catches the regression class. The other classes need their own programs. For defense-in-depth controls beyond what CI catches — output filtering, privilege scoping, input guardrails — see [aidefense.dev](https://aidefense.dev). But running this gate consistently is a 10x improvement over not having one — which is where most LLM apps still are.

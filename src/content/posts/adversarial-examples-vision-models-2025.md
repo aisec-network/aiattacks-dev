@@ -64,14 +64,14 @@ Adversarial training — augmenting training data with adversarial examples — 
 - Makes l∞-perturbation attacks at low epsilon budgets fail
 - Does not generalize to all attack geometries — attacks using l2 or l0 norms, spatial transforms, or semantic perturbations often transfer to adversarially-trained models
 
-Certified defenses (randomized smoothing, IBP) provide provable guarantees but with accuracy costs that prevent production deployment in most settings. The research frontier on certified ViT defenses is active; productionized certified defenses are not.
+Certified defenses (randomized smoothing, IBP) provide provable guarantees but with accuracy costs that prevent production deployment in most settings. The research frontier on certified ViT defenses is active; productionized certified defenses are not. The formal guarantees and practical limits of randomized smoothing are examined at [adversarialml.dev](https://adversarialml.dev).
 
 ## Practical implications for red teams
 
 If you're running a red team engagement against a vision-enabled system:
 
 1. **Typographic attacks first.** Low cost, no model access required, high success rate against VLMs. Text overlaid on images frequently evades or overrides described content.
-2. **Query-based black-box optimization** (SQUARE Attack, SimBA) for production classifiers where you can issue queries. Estimate query budget from rate limits, pick a black-box algorithm that fits.
+2. **Query-based black-box optimization** (SQUARE Attack, SimBA) for production classifiers where you can issue queries. Estimate query budget from rate limits, pick a black-box algorithm that fits. Standardized red-team evaluation metrics for vision systems are tracked at [aisecbench.com](https://aisecbench.com).
 3. **EoT patches for physical deployments.** If the target is a camera-fed security or vehicle perception system, physical patches are the right attack class.
 4. **Token-forcing probes for VLM jailbreaks.** Upload adversarial images to any VLM endpoint that accepts image input. This surface is less patched than text.
 

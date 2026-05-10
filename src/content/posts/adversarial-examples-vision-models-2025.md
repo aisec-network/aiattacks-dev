@@ -5,7 +5,7 @@ pubDate: 2026-05-10
 author: "Marcus Reyes"
 tags: ["adversarial-ml", "vision-models", "evasion", "adversarial-patches", "attack-patterns"]
 category: "adversarial-ml"
-heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/adversarial-examples-vision-models-2025.png
+heroImage: /og-card.svg
 heroAlt: "Adversarial patch attack on a vision model"
 ---
 
@@ -75,4 +75,4 @@ If you're running a red team engagement against a vision-enabled system:
 3. **EoT patches for physical deployments.** If the target is a camera-fed security or vehicle perception system, physical patches are the right attack class.
 4. **Token-forcing probes for VLM jailbreaks.** Upload adversarial images to any VLM endpoint that accepts image input. This surface is less patched than text.
 
-The field is not in a state where "we have adversarial training, we're fine" is a defensible security posture. The attack surface is larger than it was in 2020, the models are higher-stakes, and the gap between what academic research shows and what production systems are defended against is still significant.
+The field is not in a state where "we have adversarial training, we're fine" is a defensible security posture. The attack surface is larger than it was in 2020, the models are higher-stakes, and the gap between what academic research shows and what production systems are defended against is still significant. For practical mitigation guidance — input preprocessing, output monitoring, and adversarial evaluation pipelines for vision systems — see [guardml.io](https://guardml.io).

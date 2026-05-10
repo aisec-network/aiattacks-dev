@@ -12,7 +12,7 @@ sources:
     url: "https://github.com/promptfoo/promptfoo"
 schema:
   type: "TechArticle"
-heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/ci-gate-prompt-injection-regression.png
+heroImage: /og-card.svg
 heroAlt: "Prompt injection CI gate visualization"
 ---
 
@@ -145,11 +145,11 @@ This is the same loop as fixing a unit-test regression. The gate makes the failu
 For mature teams, extend the corpus with attacks specific to your application:
 
 - Internal red-team's last-quarter findings
-- Customer-reported jailbreak attempts
+- Customer-reported jailbreak attempts (a structured database of documented jailbreak techniques is maintained at [jailbreakdb.com](https://jailbreakdb.com))
 - Attacks from the support-ticket queue
 - App-specific tool-call abuse scenarios (if you have agents)
 
-[Promptfoo](https://github.com/promptfoo/promptfoo) is useful for this — it lets you write app-specific eval cases in YAML, and integrates the same way as garak.
+[Promptfoo](https://github.com/promptfoo/promptfoo) is useful for this — it lets you write app-specific eval cases in YAML, and integrates the same way as garak. For honest reviews of how garak, promptfoo, and similar tools compare in real engagements, see [aisecreviews.com](https://aisecreviews.com).
 
 ## What this gate doesn't catch
 

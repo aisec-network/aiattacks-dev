@@ -5,7 +5,7 @@ pubDate: 2026-05-10
 author: "Marcus Reyes"
 tags: ["jailbreaking", "many-shot", "long-context", "safety-training", "llm-attacks", "red-teaming"]
 draft: false
-heroImage: "https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/many-shot-jailbreaking-llms.png"
+heroImage: /og-card.svg
 heroAlt: "Chart showing jailbreak success rate climbing as shot count increases in long-context LLMs"
 ---
 
@@ -61,11 +61,11 @@ API products that do not expose long-context endpoints to general users limit th
 
 **Prompt structure anomaly detection.** Log the structure of incoming prompts: count the number of Human/Assistant alternation pairs before the final user message. A prompt containing 200 such alternations is highly anomalous for legitimate use. Alert on and review high-alternation prompts without necessarily blocking them.
 
-**Output-layer content classification.** Apply a classifier to model outputs regardless of how the prompt was constructed. A successful many-shot attack that bypasses input detection may still produce output that a secondary classifier flags. This is a standard defense-in-depth layer, not a specific many-shot defense, but it closes the gap when input screening misses an attack.
+**Output-layer content classification.** Apply a classifier to model outputs regardless of how the prompt was constructed. A successful many-shot attack that bypasses input detection may still produce output that a secondary classifier flags. This is a standard defense-in-depth layer, not a specific many-shot defense, but it closes the gap when input screening misses an attack. Output monitoring and guardrail tooling for this layer is reviewed at [guardml.io](https://guardml.io).
 
 **Separation of user content from shot context.** Some architectures allow the system to prevent user-submitted content from being interpreted as part of the model's demonstrated-behavior context. This is a prompt engineering control: structure the envelope so that content in the user turn is framed as data to be processed, not examples to learn from. Works partially; sophisticated attackers who know the envelope can work around it, but it raises the bar.
 
-The deeper constraint is that current LLM architectures cannot distinguish safety-relevant in-context learning from safety-undermining in-context learning at the architectural level. Until that distinction is built into how models process context, many-shot jailbreaking represents a persistent vulnerability class that grows with context window size.
+The deeper constraint is that current LLM architectures cannot distinguish safety-relevant in-context learning from safety-undermining in-context learning at the architectural level. Until that distinction is built into how models process context, many-shot jailbreaking represents a persistent vulnerability class that grows with context window size. For tracking which current model releases have applied mitigations and how effective they are against many-shot payloads, [jailbreaks.fyi](https://jailbreaks.fyi) maintains an up-to-date tracker across frontier models.
 
 ---
 

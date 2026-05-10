@@ -6,7 +6,7 @@ author: "Marcus Reyes"
 tags: ["tool-call-hijacking", "agentic-ai", "llm-security", "function-calling", "prompt-injection", "ai-attacks"]
 category: "attack-patterns"
 draft: false
-heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/tool-call-hijacking-agentic-systems.png
+heroImage: /og-card.svg
 heroAlt: "Diagram showing an LLM agent being redirected to trigger unauthorized tool calls"
 ---
 
@@ -62,7 +62,7 @@ This is the only control that catches an attack even after successful injection.
 
 **Tool scoping — least privilege for agents.** An LLM email summarizer should not have a `send_email` tool. An LLM document analyzer should not have `read_file` access to credential directories. Tool access should be granted per-task and per-session based on the minimum required to complete the declared task. Multi-purpose agents with broad tool access present the largest attack surface; single-purpose agents with scoped tools are far more defensible.
 
-**Output inspection before execution.** Before dispatching any tool call the model requests, run the tool-call arguments through a secondary classifier that checks for anomalous patterns: unexpected external addresses in `to:` fields, unusual file paths, SQL that includes DDL or writes to tables not in the expected working set. This is a last-line control but catches straightforward hijacks that produce obviously anomalous arguments.
+**Output inspection before execution.** Before dispatching any tool call the model requests, run the tool-call arguments through a secondary classifier that checks for anomalous patterns: unexpected external addresses in `to:` fields, unusual file paths, SQL that includes DDL or writes to tables not in the expected working set. This is a last-line control but catches straightforward hijacks that produce obviously anomalous arguments. [guardml.io](https://guardml.io) covers monitoring architectures for agentic tool-call pipelines, including pre-execution validation patterns.
 
 **Context provenance tagging.** When building context for the agent, tag each block with its source and trust level — user-submitted, system-generated, retrieved-from-document, retrieved-from-web. Propagate trust level into tool-call decision logic. A tool call that originates from reasoning over low-trust retrieved content should require higher confirmation than one originating from the user's direct instruction. Some frameworks are beginning to support this; it is not yet standard.
 

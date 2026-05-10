@@ -5,7 +5,7 @@ pubDate: 2026-05-10
 author: "Marcus Reyes"
 tags: ["context-poisoning", "memory-attacks", "agent-security", "prompt-injection", "persistence"]
 category: "attack-patterns"
-heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/llm-context-window-poisoning.png
+heroImage: /og-card.svg
 heroAlt: "LLM context window poisoning attack diagram"
 ---
 
@@ -86,7 +86,7 @@ LangGraph, AutoGen, and similar frameworks don't currently provide automatic con
 
 ## What detection looks like
 
-**Memory audit logging.** Log every write to memory storage with the full source context. Anomaly detection on memory writes: entries that contain imperative verbs, instruction patterns, or formatting inconsistent with factual memory are flagged for review.
+**Memory audit logging.** Log every write to memory storage with the full source context. Anomaly detection on memory writes: entries that contain imperative verbs, instruction patterns, or formatting inconsistent with factual memory are flagged for review. Output monitoring platforms such as [guardml.io](https://guardml.io) can instrument this layer in production deployments.
 
 **Output consistency monitoring.** If the model's responses show consistent anomalous patterns (prepended strings, shifted persona, repeated disclaimers) across different conversations, that's a signal of poisoned persistent context rather than one-off inference behavior.
 

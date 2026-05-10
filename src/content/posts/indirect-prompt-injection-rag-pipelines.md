@@ -6,7 +6,7 @@ author: "Marcus Reyes"
 tags: ["prompt-injection", "rag", "indirect-injection", "attack-patterns", "supply-chain"]
 category: "attack-patterns"
 draft: false
-heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/indirect-prompt-injection-rag-pipelines.png
+heroImage: /og-card.svg
 heroAlt: "Indirect prompt injection in RAG pipelines"
 ---
 
@@ -85,9 +85,9 @@ In testing, a payload structured as an explicit override succeeds against most o
 
 **Privilege separation via structured prompting.** Keep retrieved chunks in a syntactically distinct part of the prompt — a `<retrieved_context>` XML block, for instance — and instruct the model that instructions only appear in `<system>`. This works reasonably well until attackers learn the envelope format (and they will, if the system is widely deployed).
 
-**Output scanning.** For high-value pipelines, run the model's output through a secondary classifier looking for anomalous patterns: unexpected tool calls, out-of-scope content, verbatim reproduction of attacker-controlled strings. False positive rates make this annoying at scale; it works better as a high-severity tripwire than a general filter.
+**Output scanning.** For high-value pipelines, run the model's output through a secondary classifier looking for anomalous patterns: unexpected tool calls, out-of-scope content, verbatim reproduction of attacker-controlled strings. False positive rates make this annoying at scale; it works better as a high-severity tripwire than a general filter. [guardml.io](https://guardml.io) covers production output monitoring architectures for exactly this pattern.
 
-**Retrieval-time content inspection.** Scan ingested documents for known injection patterns before indexing. This is a cat-and-mouse game but catches unsophisticated attacks and is easy to implement as a pre-index step.
+**Retrieval-time content inspection.** Scan ingested documents for known injection patterns before indexing. This is a cat-and-mouse game but catches unsophisticated attacks and is easy to implement as a pre-index step. [promptinjection.report](https://promptinjection.report) maintains a current taxonomy of injection variants useful for building and updating these pattern libraries.
 
 **Principle of least privilege for tool access.** If the RAG agent has tool access, audit what it can do. An injection that can only produce text in the response is a nuisance. An injection that can call `send_email`, `post_to_slack`, or `run_query` is a breach. For a complete engineering guide to privilege scoping and defense-in-depth controls for LLM deployments, see [aidefense.dev](https://aidefense.dev).
 

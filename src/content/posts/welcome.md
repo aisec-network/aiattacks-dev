@@ -5,7 +5,7 @@ description: "AI Attacks covers offensive AI security from a working practitione
 pubDate: 2026-05-03
 tags: ["meta"]
 category: "site"
-heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/welcome.png
+heroImage: /og-card.svg
 heroAlt: "What this site is for"
 ---
 

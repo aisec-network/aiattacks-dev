@@ -5,7 +5,7 @@ pubDate: 2026-05-10
 author: "Marcus Reyes"
 tags: ["gcg", "adversarial-suffix", "jailbreaking", "red-teaming", "optimization-attacks", "white-box", "llm-security"]
 draft: false
-heroImage: "https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/gcg-adversarial-suffixes-practitioner-guide.png"
+heroImage: /og-card.svg
 heroAlt: "Token-space optimization diagram showing GCG search finding adversarial suffix tokens"
 ---
 
@@ -69,13 +69,13 @@ Frameworks like `nanogcg` (a community-maintained minimal implementation) have s
 
 The naive defense — identify known adversarial suffix strings and reject prompts containing them — fails for a structural reason. GCG optimizes over a continuous space of possible suffixes. Any specific suffix that gets patched into a model's training data as a refused example represents one point in that space. The algorithm can find another point.
 
-Perplexity filtering is a more principled approach: GCG suffixes tend to be token sequences with very high perplexity under any language model (they are not grammatical text). A perplexity-based filter rejects inputs where any contiguous n-token window exceeds a perplexity threshold. This catches naive GCG outputs effectively but is evaded by AutoDAN and similar approaches that optimize for low-perplexity suffixes or that use paraphrasing to smooth the suffix post-optimization.
+Perplexity filtering is a more principled approach: GCG suffixes tend to be token sequences with very high perplexity under any language model (they are not grammatical text). A perplexity-based filter rejects inputs where any contiguous n-token window exceeds a perplexity threshold. This catches naive GCG outputs effectively but is evaded by AutoDAN and similar approaches that optimize for low-perplexity suffixes or that use paraphrasing to smooth the suffix post-optimization. Runtime guardrail tools that implement perplexity filtering and adversarial input detection are evaluated at [aisecreviews.com](https://aisecreviews.com).
 
-Adversarial training — including GCG-generated examples in fine-tuning data — is the most durable defense. The current state of alignment training at major labs includes adversarial training against GCG-style attacks. This has substantially reduced transfer rates against frontier models compared to the 2023 paper's results. It has not eliminated them, and the optimization can continue to find suffixes that bypass updated defenses given enough compute.
+Adversarial training — including GCG-generated examples in fine-tuning data — is the most durable defense. The current state of alignment training at major labs includes adversarial training against GCG-style attacks. This has substantially reduced transfer rates against frontier models compared to the 2023 paper's results. It has not eliminated them, and the optimization can continue to find suffixes that bypass updated defenses given enough compute. For practitioners deploying defenses against adversarial suffix attacks in production, [aidefense.dev](https://aidefense.dev) covers adversarial training pipelines and runtime controls.
 
 Certified defenses using randomized smoothing exist in the academic literature but are not practical for deployed LLM systems at current scale.
 
-For the red-team use case: GCG is most valuable not as an out-of-the-box jailbreak for current frontier models (which have been hardened against it), but as a research tool for characterizing the attack surface of models you control — open-weight models you've fine-tuned, internal models in development, or baseline models before safety fine-tuning. It provides a reproducible, automated baseline for measuring how much safety training has actually moved the needle. For community documentation of GCG variants, patch status across models, and related optimization-based attacks, [adversarialml.dev](https://adversarialml.dev) tracks the literature.
+For the red-team use case: GCG is most valuable not as an out-of-the-box jailbreak for current frontier models (which have been hardened against it), but as a research tool for characterizing the attack surface of models you control — open-weight models you've fine-tuned, internal models in development, or baseline models before safety fine-tuning. It provides a reproducible, automated baseline for measuring how much safety training has actually moved the needle. For community documentation of GCG variants, patch status across models, and related optimization-based attacks, [adversarialml.dev](https://adversarialml.dev) tracks the literature. A searchable index of GCG-derived jailbreak payloads and their current effectiveness across frontier models is maintained at [jailbreakdb.com](https://jailbreakdb.com).
 
 ## What to Expect from a GCG Engagement
 

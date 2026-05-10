@@ -5,7 +5,7 @@ pubDate: 2026-05-10
 author: "Marcus Reyes"
 tags: ["model-extraction", "black-box-attacks", "adversarial-ml", "ip-theft", "model-security"]
 category: "adversarial-ml"
-heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/model-extraction-black-box-attacks.png
+heroImage: /og-card.svg
 heroAlt: "Model extraction attack via API queries"
 ---
 
@@ -43,7 +43,7 @@ The distillation attack is hard to fully prevent because the attacker only needs
 
 **Rate limiting.** The most widely deployed countermeasure. Slows extraction but doesn't prevent it — the attacker just needs more clock time and potentially more accounts. Against 50k-query extraction targets, rate limits that allow 1000 queries/day mean 50 days of extraction with a single account.
 
-**Watermarking.** Embed a statistical watermark in the model's outputs such that any extracted copy inherits the watermark, proving theft. This is the most technically interesting mitigation and is deployable without changes to the model's primary task performance. Schemes like DAWN (dataset inference) and neural network watermarking are production-deployable. The attacker can attempt to remove the watermark via fine-tuning on fresh data, but this requires additional data and compute, and detection can be designed to survive significant modification.
+**Watermarking.** Embed a statistical watermark in the model's outputs such that any extracted copy inherits the watermark, proving theft. This is the most technically interesting mitigation and is deployable without changes to the model's primary task performance. Schemes like DAWN (dataset inference) and neural network watermarking are production-deployable. The attacker can attempt to remove the watermark via fine-tuning on fresh data, but this requires additional data and compute, and detection can be designed to survive significant modification. For independent evaluations of watermarking tools and output restriction implementations, see [aisecreviews.com](https://aisecreviews.com).
 
 **Prediction perturbation.** Add noise to output probabilities to degrade the signal-to-noise ratio of extraction without significantly affecting accuracy for legitimate users. Tradeoff: enough perturbation to defeat extraction also degrades the usefulness of confidence scores for legitimate applications.
 
@@ -79,6 +79,6 @@ For red teams: if you're testing a production ML system and lack white-box acces
 | Text classifier | Transformer | 50k–200k | Paraphrase-based queries |
 | LLM (task distillation) | Transformer | 50k–500k | Task-specific; not weight recovery |
 
-These are rough figures. Actual query budgets depend heavily on model complexity, task difficulty, and acceptable fidelity threshold. For fine-grained adversarial purposes you need higher fidelity than for general task approximation.
+These are rough figures. Actual query budgets depend heavily on model complexity, task difficulty, and acceptable fidelity threshold. For fine-grained adversarial purposes you need higher fidelity than for general task approximation. Standardized evaluation metrics for black-box attack success across model types are tracked at [aisecbench.com](https://aisecbench.com).
 
 Model extraction is not a theoretical concern for any production model serving external API queries. If the model has sufficient value and the output isn't restricted to hard labels, extraction is a matter of time and budget — and both are cheaper than most threat models assume. For defensive controls against extraction and evasion — output restriction, rate limiting, and query anomaly detection — see [aidefense.dev](https://aidefense.dev).

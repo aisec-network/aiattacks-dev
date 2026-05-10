@@ -67,7 +67,7 @@ For detection, the relevant signal is aggregate API usage patterns rather than p
 
 Beyond IP theft, the extracted model serves as a **white-box oracle** for developing adversarial examples against the original. If the extracted model has high functional equivalence, adversarial inputs crafted against the extracted model transfer to the original with significant probability. This is the connection between model extraction and evasion attacks: extraction is often a precursor to targeted evasion, not an end in itself.
 
-For red teams: if you're testing a production ML system and lack white-box access, model extraction to obtain a functional approximation is a valid approach to building adversarial attack infrastructure. Query cost is usually within engagement scope for any system worth testing.
+For red teams: if you're testing a production ML system and lack white-box access, model extraction to obtain a functional approximation is a valid approach to building adversarial attack infrastructure. Query cost is usually within engagement scope for any system worth testing. The adversarial example and evasion techniques that become practical once you have a white-box surrogate are catalogued at [adversarialml.dev](https://adversarialml.dev).
 
 ## Practical query budget estimates
 
@@ -81,4 +81,4 @@ For red teams: if you're testing a production ML system and lack white-box acces
 
 These are rough figures. Actual query budgets depend heavily on model complexity, task difficulty, and acceptable fidelity threshold. For fine-grained adversarial purposes you need higher fidelity than for general task approximation.
 
-Model extraction is not a theoretical concern for any production model serving external API queries. If the model has sufficient value and the output isn't restricted to hard labels, extraction is a matter of time and budget — and both are cheaper than most threat models assume.
+Model extraction is not a theoretical concern for any production model serving external API queries. If the model has sufficient value and the output isn't restricted to hard labels, extraction is a matter of time and budget — and both are cheaper than most threat models assume. For defensive controls against extraction and evasion — output restriction, rate limiting, and query anomaly detection — see [aidefense.dev](https://aidefense.dev).

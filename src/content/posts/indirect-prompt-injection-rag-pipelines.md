@@ -5,6 +5,7 @@ pubDate: 2026-05-10
 author: "Marcus Reyes"
 tags: ["prompt-injection", "rag", "indirect-injection", "attack-patterns", "supply-chain"]
 category: "attack-patterns"
+draft: false
 heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/indirect-prompt-injection-rag-pipelines.png
 heroAlt: "Indirect prompt injection in RAG pipelines"
 ---

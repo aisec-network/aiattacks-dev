@@ -1,6 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="12" fill="#0d0808" />
-  <rect x="0" y="56" width="64" height="8" fill="#dc2626" />
-  <text x="32" y="44" font-family="IBM Plex Mono, system-ui, sans-serif" font-size="36" font-weight="700"
-    fill="#fef2f2" text-anchor="middle" letter-spacing="-1">A</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <rect width="256" height="256" rx="38.4" ry="38.4" fill="#29ae32"/>
+  <text x="128" y="162.048"
+    font-family="'Space Mono', system-ui, -apple-system, sans-serif"
+    font-size="97.28" font-weight="700"
+    text-anchor="middle" fill="#fefeff">AA</text>
 </svg>

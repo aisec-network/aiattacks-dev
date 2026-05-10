@@ -9,7 +9,9 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@lib/*": ["src/lib/*"],
-      "@config/*": ["src/config/*"]
+      "@config/*": ["src/config/*"],
+      "@shared/*": ["../../shared/astro/*"],
+      "@utils/*": ["src/utils/*"]
     }
   }
 }

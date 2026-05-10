@@ -42,5 +42,10 @@ export default defineConfig({
   },
   vite: {
     ssr: { noExternal: [] },
+    resolve: {
+      alias: {
+        "@shared": "../../shared/astro",
+      },
+    },
   },
 });

@@ -8,6 +8,14 @@ const persona = {
   sites: ["adversarialml-dev", "aisec-blog", "jailbreakdb-com", "jailbreaks-fyi", "mlcves-com", "promptinjection-report"],
 };
 const avatarUrl = "https://aisec-imagegen.th3gptoperator.workers.dev/?prompt=Professional%20headshot%20of%20Marcus%20Reyes%2C%20a%20confident%20Latino%20man%20in%20his%20mid-30s%2C%20dark%20background%2C%20subtle%20technical%20aesthetic%2C%20high%20contrast%2C%20photorealistic%2C%20professional%20headshot%2C%20square&aspect=square";
+const publication = {
+  name: "AI Attacks",
+  domain: "aiattacks.dev",
+  mission: "AI Attacks documents working AI red team techniques — attack patterns, tooling walkthroughs, and scoping methodology from practitioners who run actual engagements, not simulations.",
+  audience: "Red teamers, penetration testers, and security engineers responsible for assessing AI systems. Techniques are reproducible, tools are linked, and results are honest about where attacks fail as well as where they succeed.",
+  pillars: ["AI red team methodology and engagement scoping", "LLM attack patterns and bypasses", "Tool walkthroughs: Garak, PyRIT, promptmap, and others", "Agent and multi-model system exploitation", "Responsible disclosure practices for AI vulnerabilities"],
+  cta: "Subscribe to the RSS feed for new technique writeups. If you have a reproducible attack worth documenting, contact the editorial desk — contributor submissions are welcome with appropriate disclosure.",
+};
 ---
 <BaseLayout title={`About ${persona.name}`} description={persona.bioShort}>
   <script type="application/ld+json" set:html={JSON.stringify({"@context": "https://schema.org", "@type": "Person", "name": "Marcus Reyes", "description": "Red teamer with OSCP + OSEP. Ten years breaking AI systems before it was a job title. Presents at AI Village. Writes about what actually works, not what vendors claim.", "url": "https://aiattacks.dev/about", "knowsAbout": ["confident", "war-stories", "slightly contrarian", "practitioner-first"], "sameAs": ["https://adversarialml.dev/about", "https://aisec.blog/about", "https://jailbreakdb.com/about", "https://jailbreaks.fyi/about", "https://mlcves.com/about", "https://promptinjection.report/about"], "jobTitle": "Confident"})}></script>
@@ -30,5 +38,15 @@ const avatarUrl = "https://aisec-imagegen.th3gptoperator.workers.dev/?prompt=Pro
         </ul>
       </>
     )}
+    <hr />
+    <h2>About This Publication</h2>
+    <p>{publication.mission}</p>
+    <p>{publication.audience}</p>
+    <h3>What we cover</h3>
+    <ul>
+      {publication.pillars.map(p => <li>{p}</li>)}
+    </ul>
+    <h3>Stay current</h3>
+    <p>{publication.cta}</p>
   </article>
 </BaseLayout>

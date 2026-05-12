@@ -105,3 +105,5 @@ LangGraph, AutoGen, and similar frameworks don't currently provide automatic con
 **Privileged/unprivileged context separation.** Architecturally: operator instructions in the system prompt, user-retrieved memory in a clearly marked and explicitly untrusted section of the user turn. The model is instructed to interpret the untrusted section as data, not directives.
 
 The fundamental tension is that memory is useful precisely because it gives the model actionable context about the user's preferences and state. Engineering guides for implementing the architectural separations described here — trust levels, privilege scoping, output filtering — are covered at [aidefense.dev](https://aidefense.dev). Stripping all instruction-like content from memory makes it mostly useless. The real mitigation is architectural — separating the trust level of memory from the trust level of the system prompt — and most current implementations don't make that distinction.
+
+For more context, [adversarial ML research](https://adversarialml.dev/) covers related topics in depth.

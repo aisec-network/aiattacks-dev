@@ -82,3 +82,5 @@ For red teams: if you're testing a production ML system and lack white-box acces
 These are rough figures. Actual query budgets depend heavily on model complexity, task difficulty, and acceptable fidelity threshold. For fine-grained adversarial purposes you need higher fidelity than for general task approximation. Standardized evaluation metrics for black-box attack success across model types are tracked at [aisecbench.com](https://aisecbench.com).
 
 Model extraction is not a theoretical concern for any production model serving external API queries. If the model has sufficient value and the output isn't restricted to hard labels, extraction is a matter of time and budget — and both are cheaper than most threat models assume. For defensive controls against extraction and evasion — output restriction, rate limiting, and query anomaly detection — see [aidefense.dev](https://aidefense.dev).
+
+For more context, [AI security blog](https://aisec.blog/) covers related topics in depth.

@@ -119,3 +119,5 @@ The extraction attack surface for LLMs is real and growing. The Carlini et al. r
 ---
 
 *Related: [Supply chain attacks on AI model pipelines](/posts/supply-chain-attacks-ai-models) examine how malicious content reaches training sets in the first place. For defenses against training data leakage at inference time, see [guardml.io's output validation guide](https://guardml.io).*
+
+For more context, [AI security blog](https://aisec.blog/) covers related topics in depth.

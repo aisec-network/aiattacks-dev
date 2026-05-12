@@ -145,7 +145,7 @@ This is the same loop as fixing a unit-test regression. The gate makes the failu
 For mature teams, extend the corpus with attacks specific to your application:
 
 - Internal red-team's last-quarter findings
-- Customer-reported jailbreak attempts (a structured database of documented jailbreak techniques is maintained at [jailbreakdb.com](https://jailbreakdb.com))
+- Customer-reported [jailbreak](https://jailbreaks.fyi/) attempts (a structured database of documented jailbreak techniques is maintained at [jailbreakdb.com](https://jailbreakdb.com))
 - Attacks from the support-ticket queue
 - App-specific tool-call abuse scenarios (if you have agents)
 

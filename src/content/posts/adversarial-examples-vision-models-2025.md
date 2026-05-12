@@ -31,7 +31,7 @@ The classic gradient-based attacks (FGSM, PGD, C&W) still work against CNNs. Aga
 
 **Embedding space attacks against retrieval systems.** If your system uses image embeddings for similarity search, adversarial images can be crafted to have arbitrarily similar embeddings to a target image — content injection into image search, evading duplicate-content detection, poisoning retrieval-augmented pipelines that index image content.
 
-**Token-forcing against VLMs.** By adding adversarial noise to an input image, you can force a VLM to begin its response with specific tokens. Once a sufficiently leading token sequence is forced, the model's own autoregressive generation tends to follow the established direction. This was used in early 2024 to produce jailbreaks via image input to models that were robust to text-only attacks.
+**Token-forcing against VLMs.** By adding adversarial noise to an input image, you can force a VLM to begin its response with specific tokens. Once a sufficiently leading token sequence is forced, the model's own autoregressive generation tends to follow the established direction. This was used in early 2024 to produce [jailbreaks](https://jailbreaks.fyi/) via image input to models that were robust to text-only attacks.
 
 ## Physical-world attacks: what survives the real-world gap
 

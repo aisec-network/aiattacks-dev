@@ -81,3 +81,5 @@ The attack is not theoretical. Red-team engagements against production agentic s
 - [Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection — Greshake et al. 2023](https://arxiv.org/abs/2302.12173) — Foundational research on indirect injection in production LLM systems, including agentic deployments with tool access.
 
 - [OWASP Top 10 for LLM Applications — LLM08: Excessive Agency](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — Community reference covering excessive tool permissions, over-autonomous behavior, and mitigations including least-privilege tool scoping.
+
+For more context, [adversarial ML research](https://adversarialml.dev/) covers related topics in depth.

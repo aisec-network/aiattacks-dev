@@ -96,3 +96,5 @@ In testing, a payload structured as an explicit override succeeds against most o
 Indirect prompt injection in RAG is the most practical LLM attack in wide deployment right now. For ongoing coverage of documented incidents and technique variants, see [promptinjection.report](https://promptinjection.report). It doesn't require privileged access, it survives across model versions (because it exploits the instruction-following behavior that makes the model useful, not a specific model flaw), and the attack surface grows with every new data source plugged into the pipeline.
 
 The defense posture needs to treat retrieved content as untrusted by default — the same way you'd treat any user input in a traditional web app. Right now most pipelines don't do that.
+
+For more context, [adversarial ML research](https://adversarialml.dev/) covers related topics in depth.

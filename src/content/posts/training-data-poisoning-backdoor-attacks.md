@@ -138,3 +138,9 @@ The shift toward foundation models and shared fine-tuning datasets concentrates 
 ---
 
 *Related: [Supply chain attacks on AI models](/posts/supply-chain-attacks-ai-models) covers the broader ecosystem of pre-deployment attacks including Hugging Face risks and serialization exploits. For defenses, see [guardml.io](https://guardml.io) on behavioral monitoring and input validation.*
+
+## See also
+
+- [AI security blog](https://aisec.blog/)
+- [jailbreak database](https://jailbreakdb.com/)
+- [LLM jailbreak techniques](https://jailbreaks.fyi/)

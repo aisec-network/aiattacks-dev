@@ -6,6 +6,7 @@ author: "Marcus Reyes"
 tags: ["jailbreaking", "multimodal", "visual-prompt-injection", "gpt-4v", "adversarial-ml", "red-teaming"]
 category: "attack-patterns"
 draft: false
+heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/jailbreaking-multimodal-models-visual-injection.png
 ---
 
 Every safety guardrail for large language models was originally designed around text. Filters, classifiers, constitutional AI training, RLHF reward models — the entire defense stack assumes the threat arrives as tokens. When models acquire vision, the attack surface doubles: image inputs bypass text-level filters almost entirely, and the fusion layers that combine modalities introduce new vulnerabilities that neither vision-only nor language-only defenses cover.

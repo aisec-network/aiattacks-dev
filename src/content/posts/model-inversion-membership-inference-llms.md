@@ -6,6 +6,7 @@ author: "Marcus Reyes"
 tags: ["model-inversion", "membership-inference", "privacy-attacks", "training-data-extraction", "adversarial-ml"]
 category: "adversarial-ml"
 draft: false
+heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/model-inversion-membership-inference-llms.png
 ---
 
 There is a category of attack that doesn't target what a model does — it targets what the model *knows*. Model inversion and membership inference sit at the intersection of privacy and security: they exploit the fact that a trained model encodes information about its training set in ways that can be extracted, even without white-box access to weights.

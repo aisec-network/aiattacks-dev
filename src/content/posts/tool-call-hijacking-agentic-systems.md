@@ -6,7 +6,7 @@ author: "Marcus Reyes"
 tags: ["tool-call-hijacking", "agentic-ai", "llm-security", "function-calling", "prompt-injection", "ai-attacks"]
 category: "attack-patterns"
 draft: false
-heroImage: /og-card.svg
+heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/tool-call-hijacking-agentic-systems.png
 heroAlt: "Diagram showing an LLM agent being redirected to trigger unauthorized tool calls"
 ---
 

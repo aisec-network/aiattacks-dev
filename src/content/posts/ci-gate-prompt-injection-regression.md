@@ -12,7 +12,7 @@ sources:
     url: "https://github.com/promptfoo/promptfoo"
 schema:
   type: "TechArticle"
-heroImage: /og-card.svg
+heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/ci-gate-prompt-injection-regression.png
 heroAlt: "Prompt injection CI gate visualization"
 ---
 

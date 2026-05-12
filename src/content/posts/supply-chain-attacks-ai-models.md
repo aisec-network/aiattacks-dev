@@ -6,6 +6,7 @@ author: "Marcus Reyes"
 tags: ["supply-chain", "model-poisoning", "backdoor-attacks", "hugging-face", "adversarial-ml", "fine-tuning"]
 category: "attack-patterns"
 draft: false
+heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/supply-chain-attacks-ai-models.png
 ---
 
 Most AI security discourse focuses on attacking models at inference time — prompt injection, jailbreaking, extraction attacks. The supply chain is more dangerous and less discussed: the attack surface that exists before the model reaches production, in the training data, the model weights, the fine-tuning pipeline, and the artifact repositories where pre-trained models are hosted and shared.

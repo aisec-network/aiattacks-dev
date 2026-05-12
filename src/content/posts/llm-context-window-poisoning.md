@@ -5,7 +5,7 @@ pubDate: 2026-05-10
 author: "Marcus Reyes"
 tags: ["context-poisoning", "memory-attacks", "agent-security", "prompt-injection", "persistence"]
 category: "attack-patterns"
-heroImage: /og-card.svg
+heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/llm-context-window-poisoning.png
 heroAlt: "LLM context window poisoning attack diagram"
 ---
 

@@ -6,6 +6,7 @@ author: "Marcus Reyes"
 tags: ["data-poisoning", "backdoor-attacks", "trojan-ml", "red-teaming", "adversarial-ml", "fine-tuning"]
 category: "adversarial-ml"
 draft: false
+heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/training-data-poisoning-backdoor-attacks.png
 ---
 
 Most LLM attacks happen at inference time. The model is trained and deployed; the attacker shows up afterward with crafted prompts. Training data poisoning and backdoor attacks flip this: the adversary intervenes before deployment, shaping the model's learned representations in ways that lie dormant until activated.

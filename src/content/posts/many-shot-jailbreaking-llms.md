@@ -5,7 +5,7 @@ pubDate: 2026-05-10
 author: "Marcus Reyes"
 tags: ["jailbreaking", "many-shot", "long-context", "safety-training", "llm-attacks", "red-teaming"]
 draft: false
-heroImage: /og-card.svg
+heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/many-shot-jailbreaking-llms.png
 heroAlt: "Chart showing jailbreak success rate climbing as shot count increases in long-context LLMs"
 ---
 

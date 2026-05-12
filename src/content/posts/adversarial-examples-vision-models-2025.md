@@ -5,7 +5,7 @@ pubDate: 2026-05-10
 author: "Marcus Reyes"
 tags: ["adversarial-ml", "vision-models", "evasion", "adversarial-patches", "attack-patterns"]
 category: "adversarial-ml"
-heroImage: /og-card.svg
+heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/adversarial-examples-vision-models-2025.png
 heroAlt: "Adversarial patch attack on a vision model"
 ---
 

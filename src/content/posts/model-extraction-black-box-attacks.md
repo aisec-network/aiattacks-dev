@@ -5,7 +5,7 @@ pubDate: 2026-05-10
 author: "Marcus Reyes"
 tags: ["model-extraction", "black-box-attacks", "adversarial-ml", "ip-theft", "model-security"]
 category: "adversarial-ml"
-heroImage: /og-card.svg
+heroImage: https://aisec-imagegen.th3gptoperator.workers.dev/featured/aiattacks.dev/model-extraction-black-box-attacks.png
 heroAlt: "Model extraction attack via API queries"
 ---
 
